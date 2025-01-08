@@ -1,0 +1,145 @@
+
+/* pverview cards starts from here  */
+.overview_cards{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overview_cards .banner{
+    max-width: 100%;
+    display: flex;
+  }
+  
+  .overview_cards_body{
+    gap: 1rem;
+    align-items: center;
+    padding: 3rem;
+    max-width: 70%;
+    justify-content: space-evenly;
+    height: auto;
+    color: var(--blue);
+  
+  }
+  .swiper-button-prev{
+    color: #404159;
+  }
+  
+  .mySwiper{
+    padding: 3rem;
+  }
+  
+  .overview_cards {
+    position: relative;
+  }
+  
+  .banner {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .overview_cards_body {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .swiper-button-next:after, 
+  .swiper-rtl .swiper-button-prev:after {
+    content: '' !important;
+  }
+  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: '' !important;
+  }
+  
+  .overview_cards_card {
+    min-height: 70vh;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  
+  .overview_cards_card_img {
+    max-width: 150px;
+    max-height: 45vh;
+  }
+  
+  .text_two {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #000 !important;
+    z-index: 10;
+    cursor: pointer;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  
+  .swiper-button-next {
+    right: -20px !important;
+  }
+  
+  .swiper-button-prev {
+    left: -20px !important;
+  }
+  
+  /* Scale the center card */
+  .mySwiper .swiper-slide-active .overview_cards_card {
+    transform: scale(1.1);
+  }
+
+  .mySwiper .swiper-slide-active .overview_cards_card .text_two{
+    color: var(--dark-blue);
+  }
+  
+  /* Style the inactive cards */
+  .mySwiper .swiper-slide:not(.swiper-slide-active) .overview_cards_card {
+    opacity: 0.6;
+    transform: scale(0.95);
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  
+  .overview_cards_card{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    /* border: 1px solid var(--blue); */
+    align-self: baseline;
+    padding-inline: 2rem;
+    scale: 0.9;
+  
+  }
+  
+  .swiper-slide-active   .overview_cards_card{
+    border-radius: 10px;
+    border: 3px solid #44407f;
+  }
+  .swiper-slide-active{
+   
+    scale: 1;
+    color: var(--dark-blue);
+    border-radius: 10px;
+  }
+  
+  .overview_cards_card_img{
+    max-width: 230px;
+  }
+  
+  .overview_cards_card_img .img{
+    width: 100%;
+  }
+  

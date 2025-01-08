@@ -1,0 +1,991 @@
+
+*{
+  font-family: 'ITC Garamond Std Book Narrow';
+  padding: 0%;
+  margin: 0%;
+  font-size: 101%;
+}
+
+body {
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+
+:root{
+
+  --blue: #cbc5e3;
+  --dark-blue: #404159;
+  --gray: #cbc7db;
+  --dark-gray: #25252d;
+}
+
+.main{
+  max-width: 100%;
+  height: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+p{
+  color: rgb(106, 106, 106);
+}
+
+
+h2,h1{
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 30px;
+  color: var(--dark-blue);
+}
+
+.banner{
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.text_justify{
+  text-align: justify;
+}
+
+.hr_line{
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+.gray_banner{
+  background-color :#eeeeee;
+}
+
+/* header starte from here */
+
+.sidebar{
+  position: fixed;
+  display: none;
+  float: left;
+  left: 0%;
+  top: 0%;
+  background-color: white;
+  z-index: 99;
+  height: 100vh;
+  max-width: 10%;
+  width: 100%;
+}
+
+.nav_list{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.nav_list a{
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+
+.nav_list img{
+  max-width: 100px;
+}
+
+.nav_link{
+  position: relative; 
+}
+
+.nav_link a img{
+  max-width: 20px;
+}
+
+.nav_link a{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #2A196D;
+}
+
+.nav_link .nave_line{
+  position: absolute;
+  bottom: 0%;
+}
+/* header starte from here */
+
+/* main css starts from here */
+
+.hero_section {
+  height: 100vh;
+  background-image: url('../assets/hero.png');
+  background-attachment: fixed;   
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  background-position: center ;
+}
+
+.hero_section .banner{
+  display: flex;
+  width: 100%;
+  padding-block: 3rem;
+  height: 100%;
+}
+
+.hero_section  .hero_body{
+  max-height: 70%;
+  height: 100%;
+  width: 80%;
+  color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+.hero_section .banner .hero_body  h1{
+  font-size: 2.9rem;
+}
+
+.hero_section .banner .hero_body .list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem;
+  font-size: 1.6rem;
+}
+
+.hero_section .banner .hero_body .list p{
+  color: white;
+}
+
+.hero_section .banner .hero_body .list img{
+  width: 5px;
+}
+
+
+
+/* about starts from here */
+.about section{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about_body{
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about_body img{
+  max-width: 320px;
+}
+
+.about_body h1{
+  font-size: 2.9rem;
+  color: var(--dark-blue);
+}
+
+.about_body_para{
+  max-width: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between ;
+  gap: 2rem;
+}
+
+.about_body_para_two{
+  max-width: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  gap: 2rem;
+}
+
+.about_body_card{
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  max-width: 50%;
+}
+
+.about_body_card p{
+  max-width: 100%;
+}
+
+.about_body_para_two .about_body_card p{
+  max-width: 80%;
+}
+
+.about_body_card_heading{
+  display: flex;
+  gap: 3rem;
+}
+
+.about_body_card_heading h2{
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.about_body_para_two .line{
+  min-height: 20vh;
+  width: 1px;
+  background-color: black;
+}
+
+
+.about_body_para .line{
+  min-height: 20vh;
+  width: 1px;
+  background-color: black;
+}
+
+.about_body .hr_line{
+  width: 80%  ;
+}
+
+.about_body_two_card_cards{
+  width: 80%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem 3rem;
+  display: flex;
+}
+
+.about_body_two_card{
+  align-items: center;
+  flex-direction: column;
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+.about_body_two_card .hr_line{
+  width: 100%;
+}
+
+/* overview starts from here */
+
+.oveview{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-gray);
+}
+
+.overview_body{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding: 3rem;
+  max-width: 100%;
+  justify-content: space-evenly;
+  height: auto;
+  color: var(--blue);
+}
+
+.overview_body h3{
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.overview_body .hr_line{
+  width: 80%;
+  background-color: var(--blue);
+}
+
+.overview_body .overview_body_img{
+  max-width: 80%;
+  width: 100%;
+}
+.overview_body .overview_body_img img{
+  width: 100%;
+}
+
+.overview_body p {
+  color: rgb(197, 194, 194);
+  max-width: 80%;
+}
+
+
+/* how to choos diamont startd from here */
+
+.howtochoosdiamond{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* background-color: var(--dark-gray); */
+}
+
+.howtochoosdiamondimg{
+  height: 10vh;
+  position: absolute;
+  bottom: 0% ;
+}
+
+  .howtochoosdiamon_body{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 3rem;
+  max-width: 100%;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  color: var(--dark-blue);
+
+}
+
+.howtochoosdiamon_body h1{
+  font-size: 2.9rem;
+  font-weight: 400;
+}
+.howtochoosdiamon_body h4{
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.howtochoosdiamon_body p{
+  font-size: 1.2rem;
+}
+
+.howtochoosdiamon_body .hr_line{
+  width: 80%;
+  background-color: var(--blue);
+}
+
+.howtochoosdiamon_body .howtochoosdiamond_body_img{
+  max-width: 100%;
+}
+.howtochoosdiamon_body .howtochoosdiamond_body_img img{
+  width: 100%;
+}
+
+.howtochoosdiamon_body p {
+  max-width: 80%;
+}
+
+/* howtochoosdiamond Accordion starts from here  */
+
+.howtochoosdiamondAccordion{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-gray);
+  color: var(--blue);
+}
+
+.howtochoosdiamondAccordion   .banner{
+  max-width: 100%;
+  display: flex;
+}
+
+.howtochoosdiamondAccordion-body{
+  max-width: 80%;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  width: 100%;
+  text-align: center;
+  color: var(--blue);
+  *{
+    font-weight: 400;
+  }
+}
+
+.accordion-header{
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+  justify-content:space-between ;
+  /* padding-inline: 3rem; */
+}
+
+.accordion-header h2{
+  color: var(--blue);
+}
+.accordion-header-left{
+  display: flex;
+  gap: 1rem;
+}
+.accordion-heading{
+  text-align: left;
+  margin-bottom: 20px;
+  align-self: flex-end;
+}
+
+.accordion-heading h4{
+ color: rgb(197, 194, 194);
+}
+
+.accordion-header .count{
+  font-weight: 300;
+  /* padding-right: 3rem; */
+  font-size: 6rem;
+}
+
+.accordion-content{
+  text-align: left;
+  padding: 1rem;
+}
+
+
+/* flurosence starts from here */
+
+.flurosence{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flurosence .banner{
+  display: flex;
+}
+
+.flurosence_body {
+  max-width: 80%;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  width: 100%;
+  text-align: center;
+  /* color: var(--blue); */
+}
+
+.flurosence_body_cards{
+  display: flex;
+  text-align: left;
+  gap: 1rem;
+  align-items: center;
+}
+.flurosence_body_cards .line{
+  width: 1px;
+  min-height: 25vh;
+  background-color: black;
+}
+.flurosence_body_card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 3rem;
+  max-width: 40%;
+}
+
+.flurosence_body_card h3{
+  font-size: 30px;
+  color: #2A196D;
+}
+
+/* grilled thickness starts from here */
+
+.grilled{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.grilled .banner{
+  display: flex;
+}
+
+.grilled_body{
+  width: 80%;
+  gap: 1rem;
+  display: flex;
+  align-self: start;
+  flex-direction: column;
+  padding: 3rem;
+  gap: 3rem;
+  text-align: left;
+  *{
+    font-family: "Poppins", serif;
+  }
+  }
+
+  .grilled_body_heading h3{
+    
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  .grilled_body .swiper_container {
+    width: 100%;
+  }
+
+  .grilled_cards_card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45vh;
+    border-block: 1px solid black;
+  }
+
+  .grilled_cards_card_left{
+    max-width: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .grilled_cards_card_left h2{
+    font-weight: 400;
+  }
+
+  .grilled_cards_card_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20%;
+  }
+
+  .grilled_cards_card .line{
+    height: 100%;
+    width: 1px;
+    background-color: black;
+  }
+
+
+/* Custom style for the Swiper Pagination */
+.grilled_body   .swiper-pagination {
+  position: absolute;
+  bottom: 10px !important; /* Adjust distance from the bottom */
+  left: 10px !important;   /* Adjust distance from the left */
+  z-index: 10;  /* Ensure it is above the card content */
+}
+
+/* Ensure the swiper container is relative so the absolute positioning works */
+.grilled_body .grilled_cards_card {
+  position: relative;  /* Make sure the pagination is positioned inside the card */
+}
+
+/* Optional: You can customize the pagination dots too */
+.grilled_body .swiper-pagination-bullet {
+  background-color: #404159; 
+  opacity: 0.7;
+}
+
+.grilled_body .swiper-pagination-bullet-active {
+  background-color: #cbc5e3; 
+}
+
+.gemsjudge{
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.gemsjudge .banner{
+  display: flex;
+}
+
+.gemsjudge_body{
+  text-align: center;
+  max-width: 80%;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  gap: 3rem;
+  }
+
+  .gemsjudge_body h2{
+    font-size: 40px;
+    color: #2A196D;
+    font-weight: 400;
+  }
+
+  .gemsjudge_body h2 span{
+    font-size: 25px;
+  }
+
+  .gemsjudge_body_img{
+    max-width: 80%;
+  }
+  .gemsjudge_body_img img{
+    width: 100%;
+  }
+
+
+  /* happy hunting starts from here  */
+  .happydiamondhundting{
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .happydiamondhundting_body h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #2A196D;
+  }
+  .happydiamondhundting_body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding: 3rem;
+    max-width: 80%;
+    justify-content: space-evenly;
+    height: auto;
+    color: var(--dark-blue);
+  }
+
+  .happydiamondhundting_body_img{
+    max-width: 100%;
+    width: 100%;
+  }
+  .happydiamondhundting_body_img img{
+    width: 100%;
+  }
+
+  .happydiamondhundting_body .hr_line{
+    max-width: 40%;
+  }
+
+ 
+
+
+
+  .happydiamondhundting_body .text_justify{
+    text-align: justify center;
+    max-width: 80%;
+  }
+
+  .happydiamondhundting_body .happydiamondhundting_btn{
+    cursor: pointer;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 30px;
+    border: 1px solid var(--dark-blue);
+    transition: 0.5s ease-in-out;
+  }
+
+  .happydiamondhundting_body .happydiamondhundting_btn:hover{
+    background-color: var(--dark-blue);
+    color: var(--blue);
+  }
+
+
+  /* ERMS, CONDITIONS */
+
+  .termscondition_body h2{
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #2A196D;
+  }
+
+  .termscondition{
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .termscondition .banner{
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .termscondition_body{
+    max-width: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 1rem;
+  }
+
+  .termscondition_body .tabs{
+    display: flex;
+    gap: 3rem;
+  }
+  /* Basic styling for the tabs */
+.termscondition_body .tabs button {
+  cursor: pointer;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  max-width: 100px;
+  width: 100%;
+  position: relative; /* Required for absolute positioning of the underline */
+  padding-bottom: 5px; /* Add some space at the bottom for the line */
+  transition: all 0.5s ease-in-out; /* Transition for smooth effect */
+}
+
+/* Hover state with sliding effect */
+.termscondition_body .tabs button::after {
+  content: '' !important;
+  position: absolute;
+  bottom: 0;  /* Position at the bottom */
+  left: 0;    /* Start from the left */
+  width: 0%;   /* Initially no width */
+  height: 2px; /* Height of the underline */
+  background-color: black; /* Color of the underline */
+  transition: width 0.5s ease-in-out; /* Slide effect */
+}
+
+/* On hover, slide the underline from left to right */
+.termscondition_body .tabs button:hover::after {
+  width: 100%; /* Slide the line to full width */
+}
+
+.termscondition_body .tab_container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.termscondition_body .tabs button.active::after {
+  width: 100%; /* Slide the line to full width */
+}
+
+  .termscondition_body .tabs button{
+    outline-bottom: 2px solid black;
+  }
+
+  .termscondition_body .tab-content{
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .termscondition_body_img{
+    max-width: 100%;
+  }
+
+  .termscondition_body_img img{
+    width: 100%;
+  }
+
+  /* footer starts from here */
+  .footer {
+    background-color: var(--dark-gray) ;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    min-height: 60vh;
+    position: relative;
+    *{
+      color: rgb(197, 194, 194);
+    }
+}
+.footer .banner{
+  display: flex;
+}
+
+.footer_body {
+  max-width: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footerbannerimg{
+  max-width: 20%;
+  position: absolute;
+  right: 0%;
+}
+
+.footer_body_inner{
+  gap: 3rem;
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.footer_body_inner>div{
+  max-width: 33.3%;
+  width: 100%;
+}
+
+.footer_body_inner .footer_header{
+  display: flex;
+  justify-content: center;
+  /* width: 200px; */
+  /* max-width: 150px; */
+
+  }
+
+  .footer_body_inner .footer_header img{
+    max-width: 200px;
+    width: 100%;
+    height: fit-content;
+  }
+
+.footer_body .hr_line{
+  max-width: 100%;
+  background-color: white;
+}
+
+.footer_bottom{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer_para{
+  gap: 2rem;
+  flex-direction: column;
+  display: flex;
+  /* max-width: 30%; */
+  width: 100%;
+}
+
+.footer_para_inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.1rem;
+  text-wrap: nowrap;
+}
+
+.footer_para_inner input{
+  max-width: 100%;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.footer_para_inner button{
+  background-color: var(--blue);
+  color: #404159;
+  border-radius: 5px;
+  border: none;
+  min-width: 100px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+input[type=text], select {
+  padding: 10px;
+  outline: hidden;
+  border: none;
+  color: white;
+  background-color: #37373e;
+}
+
+
+
+  /* tab mmedia starts from here  */
+
+  @media (min-width: 768px) and (max-width: 1024px){
+    .hero_section  .hero_body,
+      .about_body,
+      .overview_body,
+      .overview_cards_body,
+      .howtochoosdiamon_body,
+      .flurosence_body ,
+      .grilled_body,
+      .gemsjudge_body,
+       .happydiamondhundting_body ,
+        .termscondition_body{
+          padding: 2rem 1rem;
+        }
+  }
+
+
+  /* mobile mmedia starts from here  */
+  @media (max-width: 768px) {
+    h2{
+      font-size: 20px;
+    }
+
+    .hero_section  .hero_body,
+      .about_body ,
+    .overview_body,
+    .overview_cards_body,
+    .howtochoosdiamon_body,
+    .flurosence_body ,
+    .grilled_body,
+    .gemsjudge_body,
+     .happydiamondhundting_body ,
+      .termscondition_body{
+        padding: 2rem 1rem;
+        gap: 1rem;
+      }
+
+      /* hero starts from here */
+
+      .hero_body ul{
+        flex-wrap: wrap;
+      }
+
+      /* about starts from here */
+      .about_body_para{
+        flex-wrap: wrap;
+        max-width: 100%;
+      }
+
+
+
+      .about_body_para .line{
+        min-height: 1px;
+        width: 100%;
+        background-color: black;
+      }
+
+      .about_body{
+        gap: 3rem;
+      }
+
+      .about_body_card{
+        max-width: 100%;
+      }
+
+      .about_body_two_card_cards{
+        width: 100%;
+      }
+      
+      .about_body>.hr_line{
+        display: none;
+      }
+      /* overview starts from here */
+      .overview_body .overview_body_img {
+        max-width: 100%;
+      }
+
+      .overview_body p{
+        max-width: 100%;
+      }
+  }
+

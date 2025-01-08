@@ -1,0 +1,26 @@
+.App{
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+.aside{
+  left: 0%;
+  position: sticky;
+  float: left;
+  height: 100vh;
+  max-width: 15%;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.pages{
+  /* background-color: antiquewhite; */
+  left: 15%;
+  position: absolute;
+  z-index: 1;
+  height: 100vh;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  max-width: 85%;
+  width: 100%;
+}
