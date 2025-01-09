@@ -7,7 +7,8 @@ function Gemsjudge() {
     <div className='gemsjudge'>
       <div className="banner">
         <div className="gemsjudge_body">
-          <h2>The universal standard by which gems are judged</h2>
+          <h2>The universal standard <br />
+          <span> by which gems are judged</span></h2>
           <div className="gemsjudge_body_img"><img src={gia_standard} alt="gia_standard" /></div>
 
 

@@ -1,0 +1,28 @@
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 1% 5%;
+    justify-content: flex-end;
+  }
+  
+  .nav .nav_list{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .nav .nav_list input{
+    border: none;
+    background-color: transparent;
+    color: white;
+    border-bottom: 1px solid white;
+  }
+  .nav .nav_list .search-icon{
+    color: white;
+    border-radius: 50%;
+  }
+  
+  .nav .nav_list button{
+    border: none;
+    background-color: transparent;
+  }

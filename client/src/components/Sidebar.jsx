@@ -1,42 +1,54 @@
-import React from 'react'
-import '../css/leftsidebar.css'
-import logo from '../assets/logo.png'
-import magnifineglass from '../assets/magnifying-glass-solid.svg'
-import UserDetailsForm from './UserDetailsForm'
-import { useState } from 'react';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import logo from '../assets/logo/Logo Transparency - D.png';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
+import '../css/Sidebar.css';
 
+gsap.registerPlugin(ScrollTrigger);
 
 function Sidebar() {
-  const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
+  
 
-  // Function to toggle modal visibility
-  const showModalForm = () => {
-    setShowModal(true);
+  const navigateTo = (path) => {
+    navigate(path); 
   };
 
-  const hideModalForm = () => {
-    setShowModal(false);
-  };
+  useEffect(() => {
+    const createScrollTrigger = (triggerClass, linkId) => {
+      ScrollTrigger.create({
+        trigger: triggerClass,
+        start: "top center",
+        end: "bottom center",
+        onEnter: () => gsap.to(`.nav_link`, { color: "white", duration: 0.3 }),
+        onLeave: () => gsap.to(`.nav_link`, { color: "", duration: 0.3 }),
+        onEnterBack: () => gsap.to(`.nav_link`, { color: "white", duration: 0.1 }),
+        onLeaveBack: () => gsap.to(`.nav_link`, { color: "", duration: 0.1 }),
+      });
+    };
+
+    createScrollTrigger(".hero", "home_btn");
+    createScrollTrigger(".overview", "about_btn");
+    createScrollTrigger(".howtochoosdiamondAccordoin", "services_btn");
+    createScrollTrigger(".reachus", "contact_btn");
+  }, []);
+
   return (
-   
-    <nav  className='left_sidebar'>
-        <div className='nav_list'>
-            <img src={logo} alt="" />
-            <p className='nav_link'><a href="#home">Home</a> <span className='nave_line'></span></p>
-            <p className='nav_link'><a href="#about">About Us</a> <span className='nave_line'></span></p>
-            <p className='nav_link'><a href="#services">How to choose my diamond</a> <span className='nave_line'></span></p>
-            <p className='nav_link'><a href="#contact">Reach Us <img src={magnifineglass} alt="magnifineglass" /> </a><span className='nave_line'></span></p>
-            <p className='nav_link'> <button onClick={showModalForm}>Sign Up</button><span className='nave_line'></span></p>
-        </div>
-        {showModal && (
-        <div className="modal-overlay">
-          <UserDetailsForm hideModalForm={hideModalForm} />
-
-        </div>
-      )}
+    <nav className='left_sidebar'>
+      <div className='nav_list' >
+        <img src={logo} alt="Logo" />
+        <NavLink className='nav_link' to={'/'}>Home</NavLink>
+        <NavLink className='nav_link' to={'/about'}>About Us</NavLink>
+        <NavLink className='nav_link' to={'/about'}>How to choose diamond</NavLink>
+        <NavLink className='nav_link' to={'/about'}>Reach Us <FontAwesomeIcon className='search-icon' icon={faMagnifyingGlass} /></NavLink>
+      </div>
     </nav>
-
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;

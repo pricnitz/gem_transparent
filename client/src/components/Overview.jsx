@@ -6,7 +6,7 @@ const Overview = () => {
     return (
         <section className='oveview'>
             <div className="banner">
-                <div className="overview_body" Data-scroll data-scroll-speed="5">
+                <div className="overview_body" Data-scroll-direction="left"  Data-scroll data-scroll-speed="9">
                     <div className='overview_body_img'>
                         <img src={founderimage} alt="founderimage" />
                     </div>

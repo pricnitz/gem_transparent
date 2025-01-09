@@ -6,8 +6,8 @@ const Hero = () => {
   return (
     <div className='hero_section'>
         <div className="banner">
-           <div className="hero_body" data-scroll data-scroll-speed="0.5">
-           <h1> Where Brilliance Meets Transparency</h1>
+           <div className="hero_body">
+           <h1  data-scroll data-scroll-speed="0.5"> Where Brilliance Meets Transparency</h1>
             <div className='list' data-scroll data-scroll-speed="0.5">
                 <p>Reliability</p>
                 <img src={point} alt="" />

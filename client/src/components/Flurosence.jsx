@@ -17,7 +17,7 @@ const Flurosence = () => {
                             <h3>
                                 Budget Considerations:
                             </h3>
-                            <ul className='text_justify'>
+                            <ul className='text_justify' data-scroll data-scroll-speed="0.5">
                                 <li>If a customer is only concerned with excellence and has the budget for it, go for the best in
                                     each of the 4 Cs choosing the carat that fits their requirements.   </li>
                                 <li>If the customer has a limited budget but still desires a sizeable diamond: </li>

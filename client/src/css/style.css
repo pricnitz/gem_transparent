@@ -63,57 +63,7 @@ h2 {
   background-color :#eeeeee;
 }
 
-/* header starte from here */
 
-.sidebar{
-  position: fixed;
-  display: none;
-  float: left;
-  left: 0%;
-  top: 0%;
-  background-color: white;
-  z-index: 99;
-  height: 100vh;
-  max-width: 10%;
-  width: 100%;
-}
-
-.nav_list{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.nav_list a{
-  text-decoration: none;
-  color: black;
-  font-size: 16px;
-  text-shadow: 1px 1px 1px rgb(255, 255, 255);
-}
-
-.nav_list img{
-  max-width: 100px;
-}
-
-.nav_link{
-  position: relative; 
-}
-
-.nav_link a img{
-  max-width: 20px;
-}
-
-.nav_link a{
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  color: #2A196D;
-}
-
-.nav_link .nave_line{
-  position: absolute;
-  bottom: 0%;
-}
-/* header starte from here */
 
 /* main css starts from here */
 
@@ -273,6 +223,12 @@ h2 {
   width: 100%;
 }
 
+.hr_line_two{
+  width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
 /* overview starts from here */
 
 .oveview{
@@ -290,7 +246,7 @@ h2 {
   gap: 1rem;
   align-items: center;
   padding: 3rem;
-  max-width: 100%;
+  max-width: 80%;
   justify-content: space-evenly;
   height: auto;
   color: var(--blue);
@@ -397,8 +353,32 @@ h2 {
   display: flex;
 }
 
+/* Transition for accordion content */
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  max-height: 0;
+  opacity: 0;
+}
+
+/* When the accordion item is open, change max-height and opacity */
+.accordion-content.open {
+  max-height: 500px; /* Adjust as needed */
+  opacity: 1;
+}
+
+/* Rotate the SVG 180 degrees when the accordion is open */
+.accordion-toggle-icon {
+  transition: transform 0.3s ease;
+}
+
+.accordion-toggle-icon.open {
+  transform: rotate(180deg);
+}
+
+
 .howtochoosdiamondAccordion-body{
-  max-width: 80%;
+  max-width: 70%;
   gap: 1rem;
   display: flex;
   flex-direction: column;
@@ -443,6 +423,7 @@ h2 {
 }
 
 .accordion-content{
+  color: rgb(197, 194, 194);
   text-align: left;
   padding: 1rem;
 }
@@ -463,7 +444,7 @@ h2 {
 }
 
 .flurosence_body {
-  max-width: 80%;
+  max-width: 70%;
   gap: 1rem;
   display: flex;
   flex-direction: column;
@@ -473,6 +454,12 @@ h2 {
   /* color: var(--blue); */
 }
 
+.flurosence_body hr{
+  background-color: #2A196D !important ;
+  color: #2A196D !important ;
+  border: 1px solid #2A196D !important ;
+}  
+
 .flurosence_body_cards{
   display: flex;
   text-align: left;
@@ -480,9 +467,10 @@ h2 {
   align-items: center;
 }
 .flurosence_body_cards .line{
-  width: 1px;
+  width: 3px;
   min-height: 25vh;
-  background-color: black;
+  background-color: #2A196D;
+  border-radius:5px;
 }
 .flurosence_body_card {
   display: flex;
@@ -490,8 +478,14 @@ h2 {
   gap: 1rem;
   padding: 3rem;
   max-width: 40%;
+  min-height: 23vh;
 }
 
+.flurosence_body_card ol li,
+.flurosence_body_card ul li{
+  color: rgb(106, 106, 106);
+  margin-bottom: 0.5rem;
+}
 .flurosence_body_card h3{
   font-size: 30px;
   color: #2A196D;
@@ -513,12 +507,11 @@ h2 {
 }
 
 .grilled_body{
-  width: 80%;
+  max-width: 70%;
   gap: 1rem;
   display: flex;
   align-self: start;
   flex-direction: column;
-  padding: 3rem;
   gap: 3rem;
   text-align: left;
   *{
@@ -572,12 +565,24 @@ h2 {
 
 /* Custom style for the Swiper Pagination */
 .grilled_body   .swiper-pagination {
+  text-align: left;
   position: absolute;
   bottom: 10px !important; /* Adjust distance from the bottom */
   left: 10px !important;   /* Adjust distance from the left */
   z-index: 10;  /* Ensure it is above the card content */
 }
 
+/* .swiper-button-container{
+  display: flex;
+  gap: 3rem;
+  font-size: 1.5rem;
+
+  justify-content: center;
+  font-weight: 700;
+} */
+.swiper-button-container>div{
+  cursor: pointer;
+}
 /* Ensure the swiper container is relative so the absolute positioning works */
 .grilled_body .grilled_cards_card {
   position: relative;  /* Make sure the pagination is positioned inside the card */
@@ -655,7 +660,7 @@ h2 {
     gap: 1rem;
     align-items: center;
     padding: 3rem;
-    max-width: 80%;
+    max-width: 70%;
     justify-content: space-evenly;
     height: auto;
     color: var(--dark-blue);
@@ -671,6 +676,7 @@ h2 {
 
   .happydiamondhundting_body .hr_line{
     max-width: 40%;
+    background-color: #2A196D;
   }
 
  
@@ -703,24 +709,21 @@ h2 {
     font-size: 2.5rem;
     font-weight: 400;
     color: #2A196D;
+    margin-bottom: 3rem;
   }
 
-  .termscondition{
-    max-width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
 
   .termscondition .banner{
     display: flex;
+
     justify-content: center;
   }
 
 
   .termscondition_body{
-    max-width: 80%;
+    padding-block: 3rem;
+    max-width: 70%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -778,6 +781,7 @@ h2 {
   }
 
   .termscondition_body .tab-content{
+    min-width: 100%;
     min-height: 15vh;
     display: flex;
     flex-direction: column;
@@ -847,6 +851,7 @@ h2 {
   }
 
   .footer_body_inner .footer_header img{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     max-width: 200px;
     width: 100%;
     height: fit-content;

@@ -1,0 +1,62 @@
+/* Sidebar.css */
+:root{
+
+    --blue: #cbc5e3;
+    --dark-blue: #404159;
+    --gray: #cbc7db;
+    --dark-gray: #25252d;
+  }
+
+.left_sidebar{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    gap: 0.5rem;
+    padding: 50px 10px;
+}
+
+.left_sidebar .nav_list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.left_sidebar .nav_link {
+    position: relative; /* To position the bottom line correctly */
+    padding-bottom: 5px; /* Space between text and bottom line */
+  }
+  
+  .left_sidebar .nav_link:hover::after,
+  .left_sidebar .nav_link.active::after {
+    content: ''; /* Creates an empty pseudo-element */
+    position: absolute; /* Position it at the bottom of the link */
+    left: 0;
+    bottom: 0;
+    width: 0%; /* Make the underline span the full width of the link */
+    height: 2px; /* Thickness of the underline */
+    background-color: var(--blue) ; /* Color of the underline (blue in this case) */
+    transition: width 0.3s ease; /* Smooth transition when the hover effect is triggered */
+  }
+  
+  .left_sidebar .nav_link:hover::after {
+    width: 100%; /* Underline appears when hovered */
+  }
+  
+  .left_sidebar .nav_link.active::after {
+    width: 100%; /* Ensure underline is visible when the link is active */
+  }
+  
+
+.left_sidebar .nav_list a{
+    text-decoration: none;
+}
+
+.left_sidebar .nav_list img{
+    max-width: 100px;
+}
+
+
+
+
+
+

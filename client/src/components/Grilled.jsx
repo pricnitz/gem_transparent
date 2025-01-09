@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/scrollbar';
 import 'swiper/css/effect-cards';
 import { Swiper, SwiperSlide } from 'swiper/react'; // Correct import
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, } from 'swiper/modules';
 
 const Grilled = () => {
 
@@ -46,8 +46,13 @@ const Grilled = () => {
                     <p><strong>Three examples</strong> of Diamond grade recommendations by Transparent Gems </p>
                     <div className="swiper_container">
                         <Swiper
-                            modules={[Navigation, Pagination, Scrollbar, A11y]}
+                            modules={[Navigation, Pagination, Scrollbar, A11y , ]}
                             pagination={{ clickable: true }}  // Enable clickable pagination
+                            navigation={{
+                                nextEl: '.swiper-button-next-grilled',
+                                prevEl: '.swiper-button-prev-grilled',
+                            }}
+                            effect='fade'
                             spaceBetween={0}
                             slidesPerView={1} // Default 1 card
                             loop={true}
@@ -83,6 +88,10 @@ const Grilled = () => {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
+                   <div className="swiper-button-container">
+                   {/* <div className="swiper-button-prev-grilled">←</div>
+                   <div className="swiper-button-next-grilled">→</div> */}
+                   </div>
                     </div>
                 </div>
             </div>

@@ -1,21 +1,44 @@
-import React from 'react';
-import logo from '../assets/logo.png'
+import React, { useState } from 'react';
+
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'; // Import the magnifying glass icon
+import LanguageDropdown from './langugedropdown';
+import UserDetailsForm from './UserDetailsForm';
+import '../css/App.css';
+import '../css/Header.css';
 
 const Header = () => {
+
+    const [showModal, setShowModal] = useState(false);
+
+    const showModalForm = () => setShowModal(true);
+    const hideModalForm = () => setShowModal(false);
+
     return (
-        <header className='header'>
-            <nav  >
+        <header>
+            <nav className='nav'>
                 <div className='nav_list'>
-                    <img src={logo} alt="" />
-                    <p className='nav_link'><a href="#home">Home</a> <span className='nave_line'></span></p>
-                    <p className='nav_link'><a href="#about">About Us</a> <span className='nave_line'></span></p>
-                    <p className='nav_link'><a href="#services">How to choose my diamond</a> <span className='nave_line'></span></p>
-                    <p className='nav_link'><a href="#contact">Reach Us</a><span className='nave_line'></span></p>
-                    <p className='nav_link'><a href="#contact">Sign Up</a><span className='nave_line'></span></p>
+                    <LanguageDropdown />
                 </div>
+                <div className='nav_list'>
+                    <input type="text" placeholder='Enter your text' />
+                    <FontAwesomeIcon className='nav_link' icon={faMagnifyingGlass} />
+                </div>
+                <div className='nav_list'>
+                    <button id='showmodalone_btn'> Log in</button>
+                </div>
+                <div className='nav_list'>
+                    <button id='showmodalone_btn' onClick={showModalForm}>Register</button>
+                </div>
+                {showModal && (
+                    <div className="modal-overlay">
+                        <UserDetailsForm hideModalForm={hideModalForm} />
+                    </div>
+                )}
             </nav>
         </header>
     );
 };
 
-export default Header
+export default Header;

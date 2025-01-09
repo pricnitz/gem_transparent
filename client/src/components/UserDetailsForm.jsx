@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../css/modal.css'
+import close from '../assets/close.png'
+import '../css/App.css'
 
 const UserDetailsForm = ({ hideModalForm }) => {
   const [formData, setFormData] = useState({
@@ -69,8 +70,9 @@ const UserDetailsForm = ({ hideModalForm }) => {
   return (
     <div className="modal-content">
       <h2>User Details Form</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
+      <form onSubmit={handleSubmit} className='modal-content-form'>
+       <dir>
+       <label>
           First Name:*
           <input
             type="text"
@@ -81,7 +83,9 @@ const UserDetailsForm = ({ hideModalForm }) => {
           />
           {errors.firstName && <p>{errors.firstName}</p>}
         </label>
+       </dir>
 
+        <div>
         <label>
           Last Name:*
           <input
@@ -93,7 +97,9 @@ const UserDetailsForm = ({ hideModalForm }) => {
           />
           {errors.lastName && <p>{errors.lastName}</p>}
         </label>
+        </div>
 
+        <div>
         <label>
           Designation:*
           <input
@@ -105,8 +111,10 @@ const UserDetailsForm = ({ hideModalForm }) => {
           />
           {errors.designation && <p>{errors.designation}</p>}
         </label>
+        </div>
 
-        <label>
+     <div>
+     <label>
           Company Name:*
           <input
             type="text"
@@ -117,7 +125,8 @@ const UserDetailsForm = ({ hideModalForm }) => {
           />
           {errors.companyName && <p>{errors.companyName}</p>}
         </label>
-
+     </div>
+<div>
         <label>
           Address:*
           <input
@@ -128,9 +137,10 @@ const UserDetailsForm = ({ hideModalForm }) => {
             required
           />
           {errors.address && <p>{errors.address}</p>}
-        </label>
+        </label></div>
 
-        <label>
+       <div>
+       <label>
           City:
           <input
             type="text"
@@ -139,8 +149,10 @@ const UserDetailsForm = ({ hideModalForm }) => {
             onChange={handleInputChange}
           />
         </label>
+       </div>
 
-        <label>
+       <div>
+       <label>
           State:
           <input
             type="text"
@@ -149,8 +161,10 @@ const UserDetailsForm = ({ hideModalForm }) => {
             onChange={handleInputChange}
           />
         </label>
+       </div>
 
-        <label>
+       <div>
+       <label>
           Postal/Zip Code:
           <input
             type="text"
@@ -160,7 +174,10 @@ const UserDetailsForm = ({ hideModalForm }) => {
           />
         </label>
 
-        <label>
+       </div>
+       
+       <div>
+       <label>
           Country Code:
           <input
             type="text"
@@ -169,8 +186,10 @@ const UserDetailsForm = ({ hideModalForm }) => {
             onChange={handleInputChange}
           />
         </label>
+       </div>
 
-        <label>
+       <div>
+       <label>
           Phone No:
           <input
             type="text"
@@ -179,8 +198,10 @@ const UserDetailsForm = ({ hideModalForm }) => {
             onChange={handleInputChange}
           />
         </label>
+       </div>
 
-        <label>
+      <div>
+      <label>
           Mobile No:
           <input
             type="text"
@@ -189,8 +210,11 @@ const UserDetailsForm = ({ hideModalForm }) => {
             onChange={handleInputChange}
           />
         </label>
+      </div>
 
-        <label>
+    <div>
+      
+    <label>
           Email:*
           <input
             type="email"
@@ -201,8 +225,10 @@ const UserDetailsForm = ({ hideModalForm }) => {
           />
           {errors.email && <p>{errors.email}</p>}
         </label>
+    </div>
 
-        <label>
+       <div>
+       <label>
           Website:
           <input
             type="url"
@@ -211,8 +237,11 @@ const UserDetailsForm = ({ hideModalForm }) => {
             onChange={handleInputChange}
           />
         </label>
+       </div>
+     
 
-        <label>
+       <div>
+       <label>
           Business Type:*
           <select
             name="businessType"
@@ -226,7 +255,10 @@ const UserDetailsForm = ({ hideModalForm }) => {
           </select>
           {errors.businessType && <p>{errors.businessType}</p>}
         </label>
-
+       </div>
+<div className='modal_content_profilie_section'>
+  
+<div > 
         <label>
           User Name:
           <input
@@ -236,8 +268,10 @@ const UserDetailsForm = ({ hideModalForm }) => {
             onChange={handleInputChange}
           />
         </label>
+        </div>
 
-        <label>
+   <div>
+   <label>
           Password:*
           <input
             type="password"
@@ -248,8 +282,10 @@ const UserDetailsForm = ({ hideModalForm }) => {
           />
           {errors.password && <p>{errors.password}</p>}
         </label>
+   </div>
 
-        <label>
+      <div>
+      <label>
           Retype Password:*
           <input
             type="password"
@@ -260,8 +296,10 @@ const UserDetailsForm = ({ hideModalForm }) => {
           />
           {errors.retypePassword && <p>{errors.retypePassword}</p>}
         </label>
+      </div>
 
-        <label>
+       <div>
+       <label>
           CAPTCHA:
           <input
             type="text"
@@ -272,21 +310,26 @@ const UserDetailsForm = ({ hideModalForm }) => {
           />
           {errors.captcha && <p>{errors.captcha}</p>}
         </label>
+       </div>
+</div>
 
-        <label>
+       <div className="checkbox">
+       <label>
           <input
             type="checkbox"
             name="agreeTerms"
             checked={formData.agreeTerms}
             onChange={handleCheckboxChange}
           />
-          I agree to the terms & conditions of Kiran Gems Pvt. Ltd.
+          
           {errors.agreeTerms && <p>{errors.agreeTerms}</p>}
         </label>
+        I agree to the terms & conditions of Transparent Gems Pvt. Ltd.
+       </div>
 
         <button type="submit">Submit</button>
       </form>
-      <button className="close-modal" onClick={hideModalForm}>Close</button>
+      <button className="close-modal-btn" onClick={hideModalForm}> <img src={close} alt="close" /> </button>
     </div>
   );
 };

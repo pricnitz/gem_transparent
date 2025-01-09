@@ -7,7 +7,7 @@ const About = () => {
         <div className='about'>
             <div className="banner">
                 <div className="about_body" data-scroll data-scroll-speed="0.5">
-                    <h1 data-scroll data-scroll-speed="1">TRANSPARENCY REDEFINE, <br /> DISTINCTION DELEVERY </h1>
+                    <h1 data-scroll >TRANSPARENCY REDEFINE, <br /> DISTINCTION DELEVERY </h1>
                     <img src={diamond_diagram} alt="Diamond_diagram" />
                     <div className='about_body_para text_justify'>
                         <div className="about_body_card" >

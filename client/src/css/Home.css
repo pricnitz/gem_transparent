@@ -1,0 +1,148 @@
+/* Main Layout */
+
+:root{
+
+    --blue: #cbc5e3;
+    --dark-blue: #404159;
+    --gray: #cbc7db;
+    --dark-gray: #25252d;
+  }
+  
+  
+  .App {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+  }
+  
+  .pages {
+    max-width: 100%;
+    height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width: 100%;
+  }
+  
+  /* Modal Styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.574);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000 !important;
+  }
+  
+  .modal-content h2 {
+    color: #CBC5E3;
+  }
+  
+  .modal-content {
+    background-color: #25252D;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1;
+    position: relative;
+  }
+  
+  .close-modal-btn {
+    border: none;
+    background-color: transparent;
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    max-width: 10px;
+    position: absolute;
+    right: 5%;
+    top: 0.5%;
+  }
+  
+  .close-modal-btn img {
+    width: 30px;
+  }
+  
+  button.close-modal:hover {
+    background-color: darkred;
+  }
+  
+  input {
+    width: auto;
+  }
+  
+  .modal-content .checkbox {
+    display: flex;
+    flex-direction: row;
+    min-width: 50%;
+    align-items: center;
+  }
+  
+  .modal-content .checkbox label {
+    text-wrap: nowrap;
+    width: 50px;
+  }
+  
+  .modal-content button[type=submit] {
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .modal_content_profilie_section {
+    display: flex;
+    min-width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .modal-content input,
+  select {
+    padding: 5px 10px;
+    outline: hidden;
+    border: 1px solid #ccc;
+    color: white;
+    background-color: transparent;
+    border-radius: 5px;
+  }
+  
+  .modal-content input[type=text]:focus,
+  select:focus {
+    border: 1px solid #007bff;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 20px;
+  }
+  
+  .modal-content {
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .modal-content label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-content .modal-content-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .modal-content div {
+    max-width: 250px;
+  }
+  

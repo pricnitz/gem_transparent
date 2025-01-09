@@ -1,13 +1,13 @@
 import React from 'react'
-import Diamond from '../assets/diamond.png'
+import Diamond from '../assets/howtochoos.jpg'
 import arrowdon from '../assets/icons8-down-arrow.png'
 
 const Howtochoosdiamond = () => {
     return (
         <div className='howtochoosdiamond gray_banner'>
             
-             <img className='howtochoosdiamondimg' src={arrowdon} alt="arrowdon" height={50} data-scroll data-scroll-speed="-0.8" />
-            <div className="banner">
+             <img className='howtochoosdiamondimg' src={arrowdon} alt="arrowdon" height={50} data-scroll data-scroll-speed="0.5" />
+            <div className="banner" data-scroll data-scroll-speed="0.5">
                 <div className="howtochoosdiamon_body">
                     <div className="howtochoosdiamond_body_img">
                         <img src={Diamond} alt="Diamond" />

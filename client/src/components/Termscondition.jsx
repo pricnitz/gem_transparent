@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../css/style.css'
-import topimage from '../assets/tcp_image.png';
+import topimage from '../assets/termscondition.jpg';
 
 const Termscondition = () => {
     const [activeTab, setActiveTab] = useState(0);
